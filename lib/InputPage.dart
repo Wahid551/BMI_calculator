@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class InputPage extends StatefulWidget {
@@ -11,12 +12,66 @@ class _InputPageState extends State<InputPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         title: Text('BMI Calculator'),
       ),
-      body: Center(
-        child: Text('Text Center'),
-        //TODO UI of BMI calculator
+      body: Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  //TODO use of refactor code
+                  child: RepeatContainerCode(
+                    colors: Color(0xff7c94b6),
+                  ),
+                ),
+                Expanded(
+                  child: RepeatContainerCode(
+                    colors: Color(0xff7c94b6),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: RepeatContainerCode(
+              colors: Color(0xff7c94b6),
+            ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: RepeatContainerCode(
+                    colors: Color(0xff7c94b6),
+                  ),
+                ),
+                Expanded(
+                  child: RepeatContainerCode(
+                    colors: Color(0xff7c94b6),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class RepeatContainerCode extends StatelessWidget {
+  RepeatContainerCode({@required this.colors});
+  final Color colors;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(15.0),
+      decoration: BoxDecoration(
+        color: colors,
+        borderRadius: BorderRadius.circular(10.0),
       ),
     );
   }
