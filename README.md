@@ -1,9 +1,13 @@
 
-# BMI Calculator 💪
+# BMI Calculator <img src='https://user-images.githubusercontent.com/73393935/100374672-72590e80-302e-11eb-8f5f-417a8126da9c.png' width=150 />
 
 ## Our Goal
 
 The objective of this tutorial is to look at how we can customise Flutter Widgets to achieve our own beautiful user interface designs. If you have a designer on board, no matter how unconventional their designs are, we can create them using Flutter. 
+
+# Logo
+
+<img src='https://user-images.githubusercontent.com/73393935/100374672-72590e80-302e-11eb-8f5f-417a8126da9c.png' width=150 />
 
 
 ## What you will create
