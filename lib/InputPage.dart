@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'Containerfile.dart';
+import 'Textandiconfile.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -21,14 +24,21 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  //TODO use of refactor code
                   child: RepeatContainerCode(
                     colors: Color(0xff7c94b6),
+                    cardWidget: RepeatTextandIconWidget(
+                      iconData: FontAwesomeIcons.male,
+                      Label: 'MALE',
+                    ),
                   ),
                 ),
                 Expanded(
                   child: RepeatContainerCode(
                     colors: Color(0xff7c94b6),
+                    cardWidget: RepeatTextandIconWidget(
+                      iconData: FontAwesomeIcons.female,
+                      Label: 'FEMALE',
+                    ),
                   ),
                 ),
               ],
@@ -56,22 +66,6 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class RepeatContainerCode extends StatelessWidget {
-  RepeatContainerCode({@required this.colors});
-  final Color colors;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-        color: colors,
-        borderRadius: BorderRadius.circular(10.0),
       ),
     );
   }
