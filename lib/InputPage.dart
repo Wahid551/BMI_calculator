@@ -14,19 +14,22 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Color malecolor = disablecolor;
-  Color femalecolor = disablecolor;
+  //create Enum type Gender variable
+  Gender selectGender;
 
-  void updatecolor(Gender gendertype) {
-    if (gendertype == Gender.male) {
-      malecolor = activecolor;
-      femalecolor = disablecolor;
-    }
-    if (gendertype == Gender.female) {
-      malecolor = disablecolor;
-      femalecolor = activecolor;
-    }
-  }
+  // Color malecolor = disablecolor;
+  // Color femalecolor = disablecolor;
+  //
+  // void updatecolor(Gender gendertype) {
+  //   if (gendertype == Gender.male) {
+  //     malecolor = activecolor;
+  //     femalecolor = disablecolor;
+  //   }
+  //   if (gendertype == Gender.female) {
+  //     malecolor = disablecolor;
+  //     femalecolor = activecolor;
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -42,34 +45,35 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: RepeatContainerCode(
+                    onPressed: () {
                       setState(() {
-                        updatecolor(Gender.male);
+                        selectGender = Gender.male;
                       });
                     },
-                    child: RepeatContainerCode(
-                      colors: malecolor,
-                      cardWidget: RepeatTextandIconWidget(
-                        iconData: FontAwesomeIcons.male,
-                        Label: 'MALE',
-                      ),
+                    colors: selectGender == Gender.male
+                        ? activecolor
+                        : disablecolor,
+                    cardWidget: RepeatTextandIconWidget(
+                      iconData: FontAwesomeIcons.male,
+                      Label: 'MALE',
                     ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: RepeatContainerCode(
+                    onPressed: () {
                       setState(() {
-                        updatecolor(Gender.female);
+                        selectGender = Gender.female;
                       });
                     },
-                    child: RepeatContainerCode(
-                      colors: femalecolor,
-                      cardWidget: RepeatTextandIconWidget(
-                        iconData: FontAwesomeIcons.female,
-                        Label: 'FEMALE',
-                      ),
+                    //colors: femalecolor,
+                    colors: selectGender == Gender.female
+                        ? activecolor
+                        : disablecolor,
+                    cardWidget: RepeatTextandIconWidget(
+                      iconData: FontAwesomeIcons.female,
+                      Label: 'FEMALE',
                     ),
                   ),
                 ),
