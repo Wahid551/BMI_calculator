@@ -1,4 +1,4 @@
-# BMI Calculator # BMI Calculator 💪
+# BMI Calculator 💪
 
 ## Our Goal
 
