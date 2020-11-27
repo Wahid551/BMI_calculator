@@ -6,12 +6,20 @@ The objective of this tutorial is to look at how we can customise Flutter Widget
 
 ## Logo
 
-<img src='https://user-images.githubusercontent.com/73393935/100374672-72590e80-302e-11eb-8f5f-417a8126da9c.png' width=180 />
+<img src='https://user-images.githubusercontent.com/73393935/100374672-72590e80-302e-11eb-8f5f-417a8126da9c.png' width=180 />   
 
 
 ## What you will create
 
 We’re going to make a Body Mass Index Calculator inspired by the beautiful designs made by [Ruben Vaalt](https://dribbble.com/shots/4585382-Simple-BMI-Calculator). It will be a multi screen app with simple functionality but full-on custom styling. 
+
+## Some Pictures are
+
+<img  src='https://user-images.githubusercontent.com/73393935/100475021-d568a500-3103-11eb-8f97-45ce4ed48ac2.jpeg' width=300 /> <img src='https://user-images.githubusercontent.com/73393935/100475094-0ba62480-3104-11eb-996e-6c91ba56eac1.jpeg' width=300 />
+
+## Demo 
+
+<img src='https://user-images.githubusercontent.com/73393935/100475234-722b4280-3104-11eb-8c3f-7834a4a3dfc5.gif' width=320/>
 
 
 
